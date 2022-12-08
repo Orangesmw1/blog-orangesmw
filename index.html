@@ -71,8 +71,20 @@
                     </ul>
 
                     <div class="account">
-                        <button class="btn-switch-login">
-                            <i class="fa fa-user"></i>
+                        <button class="btn-switch-login" >
+                            <i  class="fa fa-user user-after-login" href="#" role="button" data-toggle="dropdown"></i>
+                            <div class="dropdown-menu dropdown-menu-account ">
+                                <a class="dropdown-item btn-switch-Info" href="#">Info</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item btn-out" >Out</a>
+                            </div>
+                        </button>
+                        <div class="nameUserLogin"></div>
+                        <button class="btn-switch-login-2" >
+                            <i  class="fa fa-user user-after-login" href="#" role="button" data-toggle="dropdown"></i>
+                            <div class="dropdown-menu dropdown-menu-account ">
+                                <a class="dropdown-item btn-login" href="#">Login</a>
+                            </div>
                         </button>
                     </div>
 
@@ -99,69 +111,21 @@
                 <!-- slider destination 1  -->
               <div class="carousel-item active">
                 <div class="block-row">
-                    <div class="row w-100 ">
-                        <div class="col-4">
-                            <div class="block-border"></div>
-                            <button class="title-destinations"><span>DANANG</span></button>
-                            <img src="./image/philipp-kammerer-6Mxb_mZ_Q8E-unsplash.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <div class="block-border"></div>
-                            <button class="title-destinations"><span>DANANG</span></button>
-                            <img src="./image/philipp-kammerer-6Mxb_mZ_Q8E-unsplash.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <div class="block-border"></div>
-                            <button class="title-destinations"><span>DANANG</span></button>
-                            <img src="./image/philipp-kammerer-6Mxb_mZ_Q8E-unsplash.jpg" alt="">
-                        </div>
-                    </div>
+                    <div class="row w-100 slide-carousel-1"></div>
                 </div>
               </div>
 
                 <!-- slider destination 2  -->
               <div class="carousel-item">
                 <div class="block-row">
-                    <div class="row w-100 ">
-                        <div class="col-4">
-                            <div class="block-border"></div>
-                            <button class="title-destinations"><span>DANANG</span></button>
-                            <img src="./image/philipp-kammerer-6Mxb_mZ_Q8E-unsplash.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <div class="block-border"></div>
-                            <button class="title-destinations"><span>DANANG</span></button>
-                            <img src="./image/philipp-kammerer-6Mxb_mZ_Q8E-unsplash.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <div class="block-border"></div>
-                            <button class="title-destinations"><span>DANANG</span></button>
-                            <img src="./image/philipp-kammerer-6Mxb_mZ_Q8E-unsplash.jpg" alt="">
-                        </div>
-                    </div>
+                    <div class="row w-100 slide-carousel-2"></div>
                 </div>
               </div>
 
                 <!-- slider destination 3  -->
               <div class="carousel-item">
                 <div class="block-row">
-                    <div class="row w-100 ">
-                        <div class="col-4">
-                            <div class="block-border"></div>
-                            <button class="title-destinations"><span>DANANG</span></button>
-                            <img src="./image/philipp-kammerer-6Mxb_mZ_Q8E-unsplash.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <div class="block-border"></div>
-                            <button class="title-destinations"><span>DANANG</span></button>
-                            <img src="./image/philipp-kammerer-6Mxb_mZ_Q8E-unsplash.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <div class="block-border"></div>
-                            <button class="title-destinations"><span>DANANG</span></button>
-                            <img src="./image/philipp-kammerer-6Mxb_mZ_Q8E-unsplash.jpg" alt="">
-                        </div>
-                    </div>
+                    <div class="row w-100 slide-carousel-3"></div>
                 </div>
               </div>
             </div>
@@ -177,9 +141,6 @@
         </div>
     </div>
 
-    
-
-
     <!-- axios api  -->
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 
@@ -187,6 +148,7 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- file js  -->
+    <script src="./js/contentCarouselBlog.js"></script>
     <script src="./js/mainBlog.js"></script>
     <script src="./js/search.js"></script>
 

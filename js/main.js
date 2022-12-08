@@ -43,7 +43,8 @@ btnLogin.addEventListener("click",function() {
     if(dataUser) {
        if(checkEmailUser){
             if(checkPassUser) {
-                window.location = "../index.html";
+                localStorage.setItem("dataUserLogin",JSON.stringify(dataUser));
+                window.location.href = "/index.html";
             } else {
                 Swal.fire({
                     text: 'Wrong Password',
