@@ -21,7 +21,7 @@ var contentCarousel1 = [
         id: 3,
         nameDestination: "SAIGON",
         avatarDestination: "../image/bg-logo.jpg",
-    }
+    },
 ];
 
 // content slide carousel 2 

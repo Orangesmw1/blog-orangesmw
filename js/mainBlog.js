@@ -22,7 +22,7 @@ function showNameLogin(dataUser) {
     var strNameLogin = "";
     dataUser.forEach(elementNameLogin => {
         strNameLogin +=`
-            <span>${elementNameLogin.emailRegister}</span>
+            <span>${elementNameLogin?.emailRegister}</span>
         `
     });
     nameUserLogin.innerHTML = strNameLogin;
@@ -32,25 +32,26 @@ showNameLogin(dataUser);
 
 
 // icon user
-var checkDisplay = window.getComputedStyle(nameUserLogin).display;
-console.log(checkDisplay);
-
 function iconUser() {
-    if(checkDisplay === "block") {
-        btnLogin.style = `
-        display: block;
-       `
-       btnLogin2.style = `
+   if(localStorage.getItem("dataUserLogin")) {
+    btnLogin2.style = `
         display: none;
-       `
-    } else if(checkDisplay === "none") {
-        btnLogin.style = `
-        display: none;
-       `
-       btnLogin2.style = `
+    `
+    btnLogin.style = `
         display: block;
-       `
-    }
+    `
+    
+   } else {
+    btnLogin2.style = `
+        display: block;
+    `
+    btnLogin.style = `
+        display: none;
+    `
+    nameUserLogin.style = `
+        opacity: 0;
+    `
+   }
 };
 iconUser(); 
 
@@ -66,16 +67,13 @@ function outAccount() {
      display: none;
    `   
    localStorage.removeItem("dataUserLogin");
-   var userInfo = {
-    emailRegister: "",
-   }
-   localStorage.setItem("dataUserLogin",JSON.stringify(userInfo));
-   
+    iconUser(); 
 }
 btnOut.addEventListener("click",outAccount);
 
 // switch page login
 function switchLogin() {
+    console.log(123);
     window.location = "../html/indexLogin.html"
 } 
 btnSwitchLogin.addEventListener("click",switchLogin);
