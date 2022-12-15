@@ -1,3 +1,6 @@
+// clear local 
+localStorage.clear();
+
 // callAPI 
 function callAPI() {
     axios({
@@ -40,7 +43,20 @@ btnLogin.addEventListener("click",function() {
     var checkEmailUser = JSON.parse(localStorage.getItem("listAccountUserLogin")).find(element => element.emailRegister === dataUser.emailRegister)
     var checkPassUser = JSON.parse(localStorage.getItem("listAccountUserLogin")).find(element => element.passRegister === dataUser.passRegister)
     
-    if(dataUser) {
+    if(dataUser.emailRegister === "" && dataUser.passRegister === "") {
+        Swal.fire({
+            text: 'Fill full the information',
+            icon: 'error',
+            confirmButtonText: 'OK',
+            showCloseButton: true,
+                showClass: {
+                    popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                }
+        })
+    } else if(dataUser) {
        if(checkEmailUser){
             if(checkPassUser) {
                 localStorage.setItem("dataUserLogin",JSON.stringify(dataUser));
@@ -49,17 +65,31 @@ btnLogin.addEventListener("click",function() {
                 Swal.fire({
                     text: 'Wrong Password',
                     icon: 'error',
-                    confirmButtonText: 'OK'
+                    confirmButtonText: 'OK',
+                    showCloseButton: true,
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    }
                   })
             }
        } else {
             Swal.fire({
                 text: 'Wrong email login',
                 icon: 'error',
-                confirmButtonText: 'OK'
+                confirmButtonText: 'OK',
+                showCloseButton: true,
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    }
             })
        }
-    }
+    } 
 })
 
 // event enter login 

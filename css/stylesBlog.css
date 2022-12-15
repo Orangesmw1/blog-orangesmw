@@ -51,10 +51,11 @@ html, body {
 /* header  */
 header {
     background-color: black;
+    
 }
 
 .navbar {
-    
+   
 }
 
 /* nav  */
@@ -101,7 +102,7 @@ header {
 
 .dropdown-menu-account-2 {
     top: 130% !important;
-    left: 85% !important;
+    left: 82% !important;
 }
 
 .account .btn-switch-login,.btn-switch-login-2 {
@@ -247,6 +248,16 @@ header {
    
    position: relative;
 }
+
+.destinations .carousel-item .col-4 a {
+    text-decoration: none;
+    color: rgb(255, 189, 89);
+}
+
+.destinations .carousel-item .col-4 a:hover {
+    color: rgb(255, 189, 89);
+}
+
 
 .title-destinations {
     position: absolute;

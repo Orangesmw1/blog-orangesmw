@@ -73,7 +73,7 @@ function pushContentCarousel1(listContentCarousel1) {
         str1 +=`
         <div class="col-4">
             <div class="block-border"></div>
-            <button class="title-destinations"><span>${element.nameDestination}</span></button>
+            <a href="/html/detailDestination.html?post=${element.id}" class="title-destinations"><span>${element.nameDestination}</span></a>
             <img src="${element.avatarDestination}" alt="">
         </div>
         `
@@ -90,7 +90,7 @@ function pushContentCarousel2(listContentCarousel2) {
         str2 +=`
         <div class="col-4">
             <div class="block-border"></div>
-            <button class="title-destinations"><span>${element2.nameDestination}</span></button>
+            <a href="../html/detailDestination.html?itemPost=${element2.id}" class="title-destinations"><span>${element2.nameDestination}</span></a>
             <img src="${element2.avatarDestination}" alt="">
         </div>
         `
@@ -107,7 +107,7 @@ function pushContentCarousel3(listContentCarousel3) {
         str3 +=`
         <div class="col-4">
             <div class="block-border"></div>
-            <button class="title-destinations"><span>${element3.nameDestination}</span></button>
+            <a href="../html/detailDestination.html?itemPost=${element3.id}" class="title-destinations"><span>${element3.nameDestination}</span></a>
             <img src="${element3.avatarDestination}" alt="">
         </div>
         `
@@ -116,3 +116,4 @@ function pushContentCarousel3(listContentCarousel3) {
     elementSlideCarousel3.innerHTML = str3;
 };
 pushContentCarousel3(contentCarousel3);
+

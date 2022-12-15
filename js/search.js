@@ -21,4 +21,3 @@ function hideInputSearch() {
 
 btnSearch.addEventListener("click",showInputSearch);
 addEventListener("scroll",hideInputSearch);
-destinations.addEventListener("mousemove",hideInputSearch);

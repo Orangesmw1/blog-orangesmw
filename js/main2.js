@@ -47,34 +47,84 @@ btnRegister.addEventListener("click",function() {
         || dataUserRegister.emailRegister === ""
         || dataUserRegister.passRegister === "" 
         || dataUserRegister.rePassRegister === "") {
-        alert("Fill full the information");
+        Swal.fire({
+            text: 'Fill full the information',
+            icon: 'error',
+            confirmButtonText: 'OK',
+            showCloseButton: true,
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+              },
+              hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+              }
+        })
     } else {
         if(/\d/.test(dataUserRegister.nameRegister)) {
-            alert("Names without numbers");
+            Swal.fire({
+                text: 'Names without numbers',
+                icon: 'error',
+                confirmButtonText: 'OK',
+                showCloseButton: true,
+                showClass: {
+                    popup: 'animate__animated animate__fadeInDown'
+                  },
+                  hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                  }
+            })
         } else { 
             if(dataUserRegister.passRegister !== dataUserRegister.rePassRegister) {
                 Swal.fire({
                     text: 'Enter the correct password',
                     icon: 'error',
                     confirmButtonText: 'OK',
+                    showCloseButton: true,
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                      },
+                      hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                      }
                 })
             } else if(elementCheckBox.checked === false) {
                 Swal.fire({
                     text: 'Please select I agree to all statements in the Terms of Service',
                     icon: 'error',
                     confirmButtonText: 'OK',
+                    showCloseButton: true,
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                      },
+                      hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                      }
                 })
             } else if(dataUserRegister.emailRegister.includes("@gmail.com") === false ){
                 Swal.fire({
                     text: 'Missing word @gmail.com',
                     icon: 'error',
                     confirmButtonText: 'OK',
+                    showCloseButton: true,
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                      },
+                      hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                      }
                 })
             } else if(JSON.parse(localStorage.getItem("listAccountUser")).find(element => element.emailRegister === dataUserRegister.emailRegister)) {
                 Swal.fire({
                     text: 'Email already exists',
                     icon: 'error',
                     confirmButtonText: 'OK',
+                    showCloseButton: true,
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                      },
+                      hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                      }
                 })
             } else {
                 axios({
@@ -86,13 +136,26 @@ btnRegister.addEventListener("click",function() {
                     Swal.fire({
                         text: 'Successful account registration',
                         icon: 'success',
-                        confirmButtonText: 'OK',
-                    })
+                        confirmButtonText: 'Login',
+                        showCloseButton: true,
+                        showClass: {
+                            popup: 'animate__animated animate__fadeInDown'
+                          },
+                          hideClass: {
+                            popup: 'animate__animated animate__fadeOutUp'
+                          }
+                    }) .then((result)=> {
+                        if(result.isConfirmed) {
+                            window.location = "../html/indexLogin.html"
+                        } else{
+                            elementNameRegister.value = "";
+                            elementEmailRegister.value = "";
+                            elementPassRegister.value = "";
+                            elementRepeatPassRegister.value = "";
+                            elementCheckBox.checked = false;
+                        }
+                    }) 
                   }) 
-
-                setTimeout(function(){
-                    window.location = "../html/indexLogin.html.html"
-                },5000);
             }
         }
     }
