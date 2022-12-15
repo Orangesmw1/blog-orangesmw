@@ -45,6 +45,7 @@ function iconUser() {
     btnLogin.style = `
         display: block;
     `
+    find();
     
    } else {
     btnLogin2.style = `
@@ -102,4 +103,3 @@ function find() {
         }
     })
 }
-find();
