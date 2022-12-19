@@ -341,14 +341,14 @@ header {
 
 /* post popular  */
 .post-popular {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .post-popular-title {
    text-align: center;
    margin: 50px 0 40px;
    font-size: 1.4rem;
-   font-weight: 600;
+   font-weight: 800;
    text-transform: uppercase;
    color: rgb(255, 189, 89);
    
@@ -441,5 +441,191 @@ header {
 #carouselExampleControls2 .col-3:hover {
     cursor: pointer;
 }
+
+
+/* group post  */
+.group-post {
+    border-top: 1px solid rgba(128, 128, 128, 0.271);
+    padding-top: 50px;
+}
+
+.group-post .travel-tip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.travel-tip-title {
+    text-align: center;
+}
+
+.travel-tip-title h3 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: rgb(255, 189, 89);
+}
+
+.travel-tip-title h6 {
+    font-size: 1.8rem;
+}
+
+.travel-tip-title p {
+    font-size: 0.8rem;
+}
+
+.travel-tip-content {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.img-travel-tip-main {
+    height: 400px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.img-travel-tip-main img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 20px;
+}
+
+.content-main-travel-tip {
+    margin-top: 20px;
+    text-align: left;
+
+}
+
+.content-main-travel-tip p {
+    text-align: justify;
+}
+
+.btn-continue-read {
+    text-align: center;
+}
+
+.btn-continue-read .btn-read {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(255, 189, 89);
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer !important;
+
+    position: relative;
+}
+
+.btn-continue-read .btn-read::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: 2px;
+    width: 15%;
+    background-color: gray;
+    transition: all linear 0.2s;
+   
+}
+
+.btn-continue-read .btn-read:hover::after {
+    width: 100%;
+    
+}
+
+.info-post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 30px;
+
+    border-top: 5px double rgba(128, 128, 128, 0.494);
+    border-bottom: 5px double rgba(128, 128, 128, 0.494);
+
+}
+
+.author {
+
+}
+
+.by-author {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: gray;
+    font-style: italic;
+}
+
+.name-author {
+    font-size: 0.9rem;
+    font-weight: 600;
+
+}
+
+.like-post {
+    display: flex;
+    align-items: center;
+}
+
+.like-post .fa-heart {
+    color: rgb(255, 189, 89);
+    
+    text-shadow: 2px 2px 3px black;
+    cursor: pointer;
+}
+
+.amount-like {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-left: 5px;
+}
+
+.sub-travel-tip {
+    padding: 20px 0;
+}
+
+.img-sub-travel-tip {
+    height: 250px;
+    padding: 10px 0;
+}
+
+.img-sub-travel-tip img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.sub-travel-tip-title {
+}
+
+.category-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-post {
+    padding-right: 10px;
+}
+
+.category-post h6 {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: rgb(255, 189, 89);
+    margin-bottom: 0;
+}
+
+.time-post {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: gray;
+}
+
+
+
 
 

@@ -74,7 +74,7 @@ function outAccount() {
     }) .then((result => {
         if(result.isConfirmed) {
             localStorage.removeItem("dataUserLogin");
-            window.location = "../index.html"
+            window.location = "../html/indexLogin.html"
         } else {
             localStorage.removeItem("dataUserLogin");
             window.location = "../index.html"
